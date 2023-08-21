@@ -64,7 +64,7 @@ exports.delete = async function(req, res) {
     const user = await Contato.delete(req.params.id);
     if (!user) return res.render('404');
 
-    req.flash('success', 'Contato deletado com sucesso.');
+    req.flash('success', 'Contato deletado!');
     req.session.save(() => res.redirect('back'));
     return;
 }
